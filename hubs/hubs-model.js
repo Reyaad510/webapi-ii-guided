@@ -63,6 +63,7 @@ function findMessageById(id) {
     .first();
 }
 
+// Any function that has await must use async
 async function addMessage(message) {
   const [id] = await db('messages').insert(message);
 
